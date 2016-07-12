@@ -328,11 +328,9 @@ pip install python-telegram-bot
 
 ---
 
-# Escrevendo seu primeiro Bot
+# Escrevendo seu primeiro Bot!
 
 ```python
-#!/usr/bin/env python
-
 import telegram
 
 
@@ -343,13 +341,33 @@ def hello():
 
     while True:
         for update in bot.getUpdates(offset=update_id):
-            chat_id = update.message.chat_id
             update_id = update.update_id + 1
 
             if update.message:
                 text = 'Hello {}!'.format(update.message.from_user.first_name)
-                bot.sendMessage(chat_id=chat_id, text=text)
+                bot.sendMessage(update.message.chat_id, text)
 
 if __name__ == '__main__':
     hello()
+```
+
+---
+
+# Escrevendo seu primeiro Bot pythonico!
+
+```python
+from telegram.ext import Updater, CommandHandler
+
+
+def hello(bot, update):
+    text = 'Hello {}!'.format(update.message.from_user.first_name)
+    bot.sendMessage(update.message.chat_id, text)
+
+
+updater = Updater('257076271:AAEsldoAW_1puD9Sv7zAGRjQ1qBbkJsBb60')
+
+updater.dispatcher.add_handler(CommandHandler('hello', hello))
+
+updater.start_polling()
+updater.idle()
 ```
