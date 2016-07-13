@@ -20,7 +20,8 @@ class: center, middle, inverse
 5. API
 6. python-telegram-bot
 7. Escrevendo seu primeiro Bot
-8. Breve história do meu primeiro software livre
+8. Escrevendo seu primeiro Bot pythonico!
+9. Breve história do meu primeiro software livre
 
 ---
 
@@ -473,3 +474,79 @@ dp.add_error_handler(error)
 - Mais em `github.com/python-telegram-bot/python-telegram-bot/wiki`
 
 ---
+
+# Onde conseguir ajuda
+
+- Documentação: 
+    - `pythonhosted.org/python-telegram-bot`
+
+
+- Wiki: 
+    - `github.com/python-telegram-bot/python-telegram-bot/wiki`
+
+
+- Comunidade (inglês): 
+    - telegram.me/pythontelegrambotgroup
+
+
+- Bug tracker:
+    - github.com/python-telegram-bot/python-telegram-bot/issues
+
+---
+
+# Onde ajudar
+
+- Documentação: 
+    - `pythonhosted.org/python-telegram-bot`
+
+
+- Wiki: 
+    - `github.com/python-telegram-bot/python-telegram-bot/wiki`
+
+
+- Comunidade (inglês): 
+    - telegram.me/pythontelegrambotgroup
+
+
+- Bug tracker:
+    - github.com/python-telegram-bot/python-telegram-bot/issues
+
+---
+
+# Breve história do meu primeiro software livre
+
+---
+
+class: center, middle
+
+![github-stats](img/github-stats.png)
+
+---
+
+class: center, middle
+
+![github-contributors](img/github-contributors.png)
+
+---
+
+class: center, middle
+
+![leandro-and-jannes](img/leandro-and-jannes.jpg)
+
+---
+
+# Perguntas?
+
+---
+
+class: center, middle
+
+# Obrigado!
+
+## Leandro Toledo
+
+leandrotoledodesouza@gmail.com
+
+github.com/leandrotoledo
+
+@leandrotoledo (Telegram / Keybase.io)
