@@ -315,6 +315,8 @@ class: center, middle
 - Concentre-se na lógica do seu Bot.
 
 - LGPLv3
+
+- Python 2.6+ / Python 3.2+
 --
 
 
