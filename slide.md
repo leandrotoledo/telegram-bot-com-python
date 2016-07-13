@@ -95,19 +95,14 @@ class: center, middle
 # Diferença entre robôs e humanos
 
 1. Bots *não* têm status (online/offline) ou indicador de última vez visualizado.
---
 
 2. Bots *não* podem iniciar conversas.
---
 
 3. Bots *têm* armazenamento em nuvem limitado.
---
 
 4. Bots *sempre terão* usuários terminados com *bot*. *
---
 
 5. Bots adicionados a grupos *não receberão* todas as mensagens por padrão.
---
 
 6. Bots podem ser linkados por `telegram.me/<bot_username>`.
 
@@ -123,7 +118,6 @@ class: center, middle
 - `@TriviaBot`
 - `@mau_mau_bot`
 - `@myinstantsbot`
-- `@dotaresponsesbot`
 - `@TwitterForwarderBot`
 
 ---
@@ -142,13 +136,10 @@ class: center
 # The Botfather: Criando um novo bot
 
 1. `/newbot`
---
 
 2. Nome para o Bot. Ex.: **FISL 17 Bot**
---
 
 3. Nome de usuário para o Bot. Ex.: **fisl17bot** (tem que terminar com 'bot')
---
 
 4. Guarde o Token gerado.
 
@@ -165,7 +156,6 @@ class: center, middle
 # The Botfather: Adicionando comandos
 
 1. `/setcommands`
---
 
 2. Adicione todos os comandos no seguinte formato:
 ```yaml
@@ -186,16 +176,12 @@ class: center, middle
 # The Botfather: Outros ajustes
 
 1. `/setdescription`
---
 
 2. `/setabouttext`
---
 
 3. `/setprivacy`
---
 
 4. `/setjoingroups`
---
 
 5. `/help`
 
@@ -220,28 +206,25 @@ class: center, middle
 # API
 
 - A API de Bots é uma API HTTP Rest. Suporta requisições em **GET** e **POST**.
---
 
 
 ### Fazendo requisições:
 
 - Todas as consultas *devem* ser requisitadas através de **HTTPS** e nesta forma:
 `https://api.telegram.org/bot<token>/<método>`
---
+-
 
 - Todas as consultas *devem* ser feitas usando **UTF-8**.
---
 
 - Todos os métodos são *case-insensitive*.
---
 
 - A resposta é um objeto **JSON** que possui:
     - um campo 'ok': *true* ou *false*
---
+-
     - um campo 'result' se 'ok' for *true*
---
+-
     - um campo 'description' se 'ok' for *false*
---
+-
     - um campo 'error_code' em caso de erros
 
 ---
@@ -253,29 +236,17 @@ class: center, middle
 
 - Métodos:
     - `getMe`
---
     - `getUpdates`
---
     - `sendMessage`
---
     - `sendPhoto`
---
     - `sendAudio`
---
     - `sendDocument`
---
     - `sendVideo`
---
     - `sendVoice`
---
     - `sendLocation`
---
     - `kickChatMember`
---
     - `leaveChat`
---
     - `unbanChatMember`
---
     - Todos os métodos em `core.telegram.org/bots/api`
 
 ---
@@ -329,7 +300,6 @@ class: center, middle
 ```bash
 pip install python-telegram-bot
 ```
---
 
 #### Usar é ainda mais simples!
 ```python
@@ -484,16 +454,12 @@ dp.add_error_handler(error)
 # Outras classes
 
 - JobQueue
---
 
 - RegexHandler
---
 
 - InlineQueryHandler
---
 
 - ConversationHandler (em desenvolvimento)
---
 
 - Mais em `github.com/python-telegram-bot/python-telegram-bot/wiki`
 
@@ -509,8 +475,12 @@ dp.add_error_handler(error)
     - `github.com/python-telegram-bot/python-telegram-bot/wiki`
 
 
-- Comunidade (inglês): 
+- Comunidade (en):
     - telegram.me/pythontelegrambotgroup
+
+
+- Comunidade (pt-br):
+    - telegram.me/DesenvolvimentoDeRobos
 
 
 - Bug tracker:
@@ -528,8 +498,12 @@ dp.add_error_handler(error)
     - `github.com/python-telegram-bot/python-telegram-bot/wiki`
 
 
-- Comunidade (inglês): 
+- Comunidade (en):
     - telegram.me/pythontelegrambotgroup
+
+
+- Comunidade (pt-br):
+    - telegram.me/DesenvolvimentoDeRobos
 
 
 - Bug tracker:
