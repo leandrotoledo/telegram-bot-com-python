@@ -24,6 +24,17 @@ class: center, middle, inverse
 
 ---
 
+class:center, middle
+
+# App Makadu para perguntas e feedback
+
+![makadu-1](img/makadu-1.png)
+![makadu-2](img/makadu-2.png)
+![makadu-3](img/makadu-3.png)
+![makadu-4](img/makadu-4.png)
+
+---
+
 # O que é o Telegram?
 
 - Lançado em Agosto de 2013
@@ -354,6 +365,28 @@ if __name__ == '__main__':
 ---
 
 # Escrevendo seu primeiro Bot pythonico!
+### MessageHandler
+
+```python
+from telegram.ext import Updater, MessageHandler, Filters
+
+
+def echo(bot, update):
+    bot.sendMessage(update.message.chat_id, text=update.message.text)
+
+
+updater = Updater('257076271:AAEsldoAW_1puD9Sv7zAGRjQ1qBbkJsBb60')
+
+updater.dispatcher.add_handler(MessageHandler([Filters.text], echo))
+
+updater.start_polling()
+updater.idle()
+```
+
+---
+
+# Escrevendo seu primeiro Bot pythonico!
+### CommandHandler
 
 ```python
 from telegram.ext import Updater, CommandHandler
@@ -371,3 +404,72 @@ updater.dispatcher.add_handler(CommandHandler('hello', hello))
 updater.start_polling()
 updater.idle()
 ```
+
+---
+
+# Escrevendo seu primeiro Bot pythonico!
+### CommandHandler com argumentos
+
+```python
+from telegram.ext import Updater, CommandHandler
+
+
+def hello(bot, update, args):
+    text = 'Hello {}!'.format(args[0])
+    bot.sendMessage(update.message.chat_id, text)
+
+
+updater = Updater('257076271:AAEsldoAW_1puD9Sv7zAGRjQ1qBbkJsBb60')
+
+updater.dispatcher.add_handler(CommandHandler('hello', hello, pass_args=True))
+
+updater.start_polling()
+updater.idle()
+```
+
+---
+
+# Escrevendo seu primeiro Bot pythonico!
+### ErrorHandler
+
+```python
+from telegram.error import *
+
+
+def error(bot, update, error):
+    try:
+        raise error
+    except Unauthorized:
+        # Bot bloqueado, remover chat_id da lista de usuários
+    except BadRequest:
+        # Requisição mal formatada
+    except TimedOut:
+        # Requisição lenta
+    except NetworkError:
+        # Requisição com outros erros de erro
+    except TelegramError:
+        # Todos os outros erros do Telegram
+
+
+dp.add_error_handler(error)
+```
+
+---
+
+# Outras classes
+
+- JobQueue
+--
+
+- RegexHandler
+--
+
+- InlineQueryHandler
+--
+
+- ConversationHandler (em desenvolvimento)
+--
+
+- Mais em `github.com/python-telegram-bot/python-telegram-bot/wiki`
+
+---
