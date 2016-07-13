@@ -39,7 +39,7 @@ class:center, middle
 # O que é o Telegram?
 
 - Lançado em Agosto de 2013
-- 15 bilhões de mensagens entreguer por dia
+- 15 bilhões de mensagens entregues por dia
 - 100 milhões de usuários mensais
 - 350 mil novos usuários diariamente
 
@@ -94,13 +94,13 @@ class: center, middle
 
 # Diferença entre robôs e humanos
 
-1. Bots *não* tem status (online/offline) ou indicador de última vez visualizado.
+1. Bots *não* têm status (online/offline) ou indicador de última vez visualizado.
 --
 
 2. Bots *não* podem iniciar conversas.
 --
 
-3. Bots *tem* armazenamento em nuvem limitado.
+3. Bots *têm* armazenamento em nuvem limitado.
 --
 
 4. Bots *sempre terão* usuários terminados com *bot*. *
