@@ -1,16 +1,29 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+import logging
+
+
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    level=logging.INFO)
+
+logger = logging.getLogger(__name__)
 
 
 def echo(bot, update):
+    logger.info('New update from "%s"' % (update.from_user.name))
+
     bot.sendMessage(update.message.chat_id, text=update.message.text)
 
 
 def hello(bot, update):
+    logger.info('New update from "%s"' % (update.from_user.name))
+
     text = 'Hello {}!'.format(update.message.from_user.first_name)
     bot.sendMessage(update.message.chat_id, text)
 
 
 def sayhito(bot, update, args):
+    logger.info('New update from "%s"' % (update.from_user.name))
+
     text = 'Hello {}!'.format(args[0])
     bot.sendMessage(update.message.chat_id, text)
 
