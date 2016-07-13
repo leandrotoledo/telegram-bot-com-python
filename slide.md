@@ -113,6 +113,21 @@ class: center, middle
 
 ---
 
+# Exemplos de Bots
+
+- `@music`
+- `@vote`
+- `@like`
+- `@edrobot`
+- `@GitHub_bot`
+- `@TriviaBot`
+- `@mau_mau_bot`
+- `@myinstantsbot`
+- `@dotaresponsesbot`
+- `@TwitterForwarderBot`
+
+---
+
 class: center
 # The @BotFather
 > #### Um Bot para a todos governar, Um Bot para encontrá-los,
@@ -298,6 +313,8 @@ class: center, middle
 - Não reinvente a roda.
 
 - Concentre-se na lógica do seu Bot.
+
+- LGPLv3
 --
 
 
@@ -415,14 +432,14 @@ updater.idle()
 from telegram.ext import Updater, CommandHandler
 
 
-def hello(bot, update, args):
+def sayhito(bot, update, args):
     text = 'Hello {}!'.format(args[0])
     bot.sendMessage(update.message.chat_id, text)
 
 
 updater = Updater('257076271:AAEsldoAW_1puD9Sv7zAGRjQ1qBbkJsBb60')
 
-updater.dispatcher.add_handler(CommandHandler('hello', hello, pass_args=True))
+updater.dispatcher.add_handler(CommandHandler('sayhito', sayhito, pass_args=True))
 
 updater.start_polling()
 updater.idle()
