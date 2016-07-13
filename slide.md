@@ -220,11 +220,8 @@ class: center, middle
 
 - A resposta é um objeto **JSON** que possui:
     - um campo 'ok': *true* ou *false*
--
     - um campo 'result' se 'ok' for *true*
--
     - um campo 'description' se 'ok' for *false*
--
     - um campo 'error_code' em caso de erros
 
 ---
