@@ -308,15 +308,17 @@ class: center, middle
 
 #### Bots Pythonicos!
 
-- Interface para a API.
+- Interface para a API
 
-- Não reinvente a roda.
+- Não reinvente a roda
 
-- Concentre-se na lógica do seu Bot.
+- Concentre-se na lógica do seu Bot
 
 - LGPLv3
 
-- Python 2.6+ / Python 3.2+
+- Python 2.6+ / Python 3.3+
+
+- 93% do codebase testado
 --
 
 
