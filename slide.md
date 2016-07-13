@@ -319,8 +319,11 @@ class: center, middle
 - Python 2.6+ / Python 3.3+
 
 - 93% do codebase testado
---
 
+
+---
+
+.center[![ptb-banner](img/ptb-banner.png)]
 
 #### Instalar é fácil!
 ```bash
